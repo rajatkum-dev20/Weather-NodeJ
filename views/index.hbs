@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <h2>{{title}}</h2>
+
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p id="message1"></p>
+        <p id="messageErr"></p>
+        <p id="message3"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="/utils/fetch.js"></script>
+</body>
+
+</html>
