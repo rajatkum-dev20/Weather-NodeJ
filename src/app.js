@@ -5,6 +5,7 @@ const forecast = require('./utils/forecast')
 const hbs = require('hbs')
 
 const app=express()
+const port=process.env.PORT || 3000
 //const assestsDirectoryPath=path.join(__dirname,'../assests')
 const partialsPath = path.join(__dirname,'../views/partials')
 const publicDirectoryPath = path.join(__dirname)
@@ -52,6 +53,6 @@ app.get('/weather',(req,res)=>{
 app.get('*',(req,res)=>{
     res.send('404 Page not Found')
 })
-app.listen(3000,()=>{
-    console.log('server is up and running on port 3000')
+app.listen(port,()=>{
+    console.log('server is up and running on port'+port)
 })
